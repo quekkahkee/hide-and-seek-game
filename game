@@ -1,0 +1,22 @@
+import random
+
+def hide_and_seek():
+    locations = ["behind the curtain", "in the closet", "under the bed"]
+    hidden_location = random.choice(locations)
+    
+    print("Let's play hide and seek!")
+    print("I'm hiding somewhere around here. Can you find me?")
+    
+    attempts = 0
+    while True:
+        guess = input("Where do you think I'm hiding? ").strip().lower()
+        attempts += 1
+        
+        if guess == hidden_location:
+            print(f"Congratulations! You found me in {attempts} attempts. I was hiding {hidden_location}.")
+            break
+        else:
+            print("Nope, try again!")
+
+if __name__ == "__main__":
+    hide_and_seek()
